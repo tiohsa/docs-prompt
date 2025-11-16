@@ -1,0 +1,18 @@
+project_name: "在庫最適化プラットフォーム"
+domain: "製造業の物流・在庫管理"
+background: >
+  在庫が増えすぎる問題があり、需要予測と在庫最適化を行うための新システムを構築する。
+scope:
+  - 在庫データの収集・集約
+  - 需要予測アルゴリズムの実行
+  - 在庫発注案の提示
+stakeholders:
+  - 物流部門担当者
+  - 情シス
+  - 経営層
+non_functional_requirements:
+  - 可用性: 99.9%以上
+  - 応答時間: 95%のリクエストで3秒以内
+constraints:
+  - 納期: 2026-03
+  - 利用技術: C#, TypeScript, PostgreSQL, Azure

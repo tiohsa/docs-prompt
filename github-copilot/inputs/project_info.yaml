@@ -1,0 +1,56 @@
+project_name: "在庫最適化プラットフォーム"
+created_at: "2025-11-17"
+author: "チーム・ドラゴン"
+version: "v0.1"
+related_docs:
+  - "企画書_在庫最適化PJ_v1.0.docx"
+
+background: >
+  倉庫ごとに在庫が過剰・不足するケースが増加しており、
+  在庫コストの増加と欠品リスクが問題になっている。
+
+purpose: >
+  在庫の見える化と需要予測に基づく適正在庫量の算定により、
+  在庫コストを削減しつつ欠品を防止する。
+
+scope_summary: >
+  在庫データの集約・分析、需要予測、発注案の提示を対象とし、
+  物流実行システムの刷新は含めない。
+
+stakeholders:
+  - role: "物流部門担当者"
+    interest: "在庫の適正化、欠品防止"
+  - role: "情報システム部"
+    interest: "安定稼働、既存システムとの連携"
+  - role: "経営層"
+    interest: "在庫コスト削減、KPI 可視化"
+
+functional_requirements:
+  - id: "F-001"
+    name: "在庫一覧参照"
+    description: "倉庫別・品目別に在庫一覧を表示する"
+    priority: "Must"
+
+  - id: "F-002"
+    name: "在庫アラート通知"
+    description: "閾値を下回った在庫を通知する"
+    priority: "Should"
+
+non_functional_requirements:
+  performance:
+    - "通常時、95%のリクエストが3秒以内に応答すること"
+  availability:
+    - "月間稼働率 99.9% 以上"
+  security:
+    - "社内セキュリティポリシーに準拠すること"
+  operations:
+    - "主要イベントの監視とアラートが可能であること"
+
+constraints:
+  - "クラウドは Azure を利用する"
+  - "開発言語は C# / TypeScript を基本とする"
+  - "納期は 2026-03-31 まで"
+
+risks:
+  - "IoT デバイス供給遅延"
+  - "既存システム側仕様変更の影響"
